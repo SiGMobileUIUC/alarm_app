@@ -128,7 +128,7 @@ class _AlarmPageState extends State<AlarmPage> {
                           const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 20),
                       child: Container(
                         width: 100,
-                        height: 100,
+                        height: 150,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -171,7 +171,10 @@ class _AlarmPageState extends State<AlarmPage> {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        _alarms[index].id.toString(),
+                                        // clean up
+                                        _alarms[index].id != null
+                                            ? _alarms[index].id.toString()
+                                            : "No set time",
                                         style: const TextStyle(
                                           fontFamily: 'Lexend Deca',
                                           color: Color(0xFF39D2C0),
@@ -248,17 +251,6 @@ class _AlarmPageState extends State<AlarmPage> {
                                                       fontSize: 20,
                                                       fontWeight:
                                                           FontWeight.bold),
-                                                  // FlutterFlowTheme
-                                                  //         .of(context)
-                                                  //     .title3
-                                                  //     .override(
-                                                  //       fontFamily:
-                                                  //           'Lexend Deca',
-                                                  //       color: Colors.white,
-                                                  //       fontSize: 20,
-                                                  //       fontWeight:
-                                                  //           FontWeight.bold,
-                                                  //     ),
                                                 ),
                                               ),
                                             ),
@@ -271,18 +263,6 @@ class _AlarmPageState extends State<AlarmPage> {
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.normal,
                                               ),
-                                              // FlutterFlowTheme.of(
-                                              //         context)
-                                              //     .bodyText1
-                                              //     .override(
-                                              //       fontFamily:
-                                              //           'Lexend Deca',
-                                              //       color:
-                                              //           Color(0xB4FFFFFF),
-                                              //       fontSize: 14,
-                                              //       fontWeight:
-                                              //           FontWeight.normal,
-                                              //     ),
                                             ),
                                           ],
                                         ),
